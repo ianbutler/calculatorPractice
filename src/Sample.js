@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 class App extends Component {
   state = {
-    inputValue: ""
+    inputValue: "",
+    clickNumber: 0
   };
 
   changeInputState = e => {
@@ -12,8 +13,23 @@ class App extends Component {
   render() {
     return (
       <div>
+        <p>Repeat these exercises a lot!</p>
+        <p>
+          Exercise 1: Delete different components and then rebuild them. Over
+          and over again
+        </p>
+        <p>
+          Exercise 2: Make the this.state.clickNumber increase everytime you
+          click on the button.
+        </p>
+        <p>
+          {" "}
+          Exercise 3: Add your own changes and manipulate the components to help
+          you understand the different pieces involved
+        </p>
         <Form changeHandler={this.changeInputState} />
         <p>Input value: {this.state.inputValue}</p>
+        <p>Click number: {this.state.clickNumber}</p>
       </div>
     );
   }
